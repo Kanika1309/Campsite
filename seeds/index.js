@@ -22,9 +22,34 @@ const seedDB = async () => {
             author: '614f36d77958fc1fd789598c',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: 'https://source.unsplash.com/collection/9046579',
+            //image: 'https://source.unsplash.com/collection/9046579',
             description: 'NICE',
-            price
+            price,
+            geometry: {
+                type: "Point",
+                coordinates: [
+                    cities[random1000].longitude,
+                    cities[random1000].latitude,
+                ]
+            },
+            images: [
+                {
+                    url: 'https://res.cloudinary.com/dx7wvmidw/image/upload/v1632672696/CAMPSITE/c1rfl9j0kulhlfbzq2je.jpg',
+                    filename: 'CAMPSITE/c1rfl9j0kulhlfbzq2je',
+                },
+                {
+                    url: 'https://res.cloudinary.com/dx7wvmidw/image/upload/v1632672696/CAMPSITE/v2xpfrcqrcgvr0tmnnyp.jpg',
+                    filename: 'CAMPSITE/v2xpfrcqrcgvr0tmnnyp',
+                },
+                {
+                    url: 'https://res.cloudinary.com/dx7wvmidw/image/upload/v1632672696/CAMPSITE/dnd7vv5mnzitl8eqeiol.jpg',
+                    filename: 'CAMPSITE/dnd7vv5mnzitl8eqeiol',
+                },
+                {
+                    url: 'https://res.cloudinary.com/dx7wvmidw/image/upload/v1632672696/CAMPSITE/bzusw1iq1uv0dhbbec0e.jpg',
+                    filename: 'CAMPSITE/bzusw1iq1uv0dhbbec0e',
+                }
+            ],
         })
         await camp.save();
     }
