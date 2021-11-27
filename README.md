@@ -1,6 +1,5 @@
 # Campsite
 
-# Introduction 
 * It is a website which helps the users to find the perfect place for camping
 as pertheirrequirements.
 * It only allows registered users to login.
