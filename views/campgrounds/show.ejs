@@ -1,7 +1,5 @@
 <% layout('layouts/boilerplate')%>
     <link rel="stylesheet" href="/stylesheets/stars.css">
-
-
     <div class="row mb-3">
         <div class="col-6">
             <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -44,7 +42,6 @@
                     <li class="list-group-item">₹
                         <%=campground.price%>/night
                     </li>
-                    <li class="list-group-item">A third item</li>
                 </ul>
                 <% if(currentUser && campground.author.equals(currentUser._id)) {%>
                     <div class="card-body">
@@ -124,6 +121,6 @@
     </div>
     <script>
         const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-        const campground = <% - JSON.stringify(campground) %>
+        const campground = '<%- JSON.stringify(campground)%> ';
     </script>
     <script src="/javascripts/showPageMap.js"></script>
